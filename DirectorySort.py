@@ -3,7 +3,6 @@ from pathlib import Path
 import datetime
 
 #What directory to sort
-#Directory = Path("c:/", "Users", "matth", "Downloads")
 InputDirectory = str(input("Input the directory to sort: "))
 Directory = Path(f"{InputDirectory}")
 #If the directory does not exist, throw an error
