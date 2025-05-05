@@ -16,4 +16,8 @@ for child in Directory.iterdir():
     except: pass
     #If is a file and sorted directory exists, move to it
     if child.is_file():
-        child.rename(Folder / child.name)
+        try:
+            child.rename(Folder / child.name)
+        #If the file already exists in the sorted directory, skip it
+        except FileExistsError:
+            pass
